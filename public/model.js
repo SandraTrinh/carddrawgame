@@ -59,13 +59,15 @@ const Model = {
     this.updateCount(3,12);
     this.updateCount(4,12);
     this.updateCount(5,12);
+    let event = new CustomEvent("deckIsReset!");
+    window.dispatchEvent(event)
   },
 
   //is the card still in the deck?
   haveCard: function(cardId) {
     let haveTheCard = true;
     let card = this.getCard(cardId);
-    if(card.count === 0){
+    if(card[0].count === 0){
       haveTheCard = false;
     }
     return haveTheCard;
@@ -129,6 +131,7 @@ const Model = {
       while (flag){
         console.log("Random card id is: ", cardid);
         if(!this.haveCard(cardid)){
+          console.log("card is not in deck!");
           cardid = Util.getRndInteger(1,6);
         } else {
           flag = false;
