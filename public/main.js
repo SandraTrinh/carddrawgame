@@ -32,7 +32,6 @@ function drawButtonHandler(event) {
 window.addEventListener("cardIsDrawn", function(e){
     let countNum = Model.getCountDeck();
     View.countDeckView("deckCount",countNum);
-    console.log("Deck is Reset!");
 });
 
 window.addEventListener("countUpdated", function(e){
@@ -43,6 +42,7 @@ window.addEventListener("deckIsReset!", function(e){
     View.shuffView();
     let countNum = Model.getCountDeck();
     View.countDeckView("deckCount",countNum);
+    console.log("Deck is Reset!");
 });
 
 window.onload = function() {
