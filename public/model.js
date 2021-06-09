@@ -71,6 +71,15 @@ const Model = {
     return haveTheCard;
   },
 
+  //get the current number of cards left in the deck
+  getCountDeck: function() {
+    let count = 0;
+    for(let i=0; i<this.data.deck.length; i++){
+      count += this.data.deck[i].count;
+    }
+    return count;
+  },
+
   // //this check if the deck have cards or not
   // deckFull: function() {
   //   let full = false;

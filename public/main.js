@@ -30,7 +30,8 @@ function drawButtonHandler(event) {
 };
 
 window.addEventListener("cardIsDrawn", function(e){
-    
+    let countNum = Model.getCountDeck();
+    View.countDeckView("deckCount",countNum);
 });
 
 window.onload = function() {
