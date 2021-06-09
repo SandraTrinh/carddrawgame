@@ -116,6 +116,7 @@ const Model = {
 
   //draw a card
   drawCard: function() {
+    this.updateDeck(); 
     //pick a card 1 to 5
     let cardid = Util.getRndInteger(1,6);
     
