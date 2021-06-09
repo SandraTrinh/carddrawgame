@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color:brown;
+    background-color:rgb(63, 23, 23);
 }
 
 header {
@@ -35,21 +35,22 @@ button {
     border: 3px solid black;
     width: 300px;
     height: 360px;
+    margin:  10px auto 10px auto;
 }
 
 #target div {
     border: 0px;
+    margin: auto;
 }
 
 .cardName, p {
     width: 300px;
-    padding: 30px;
+    padding: 20px;
 }
 
 .cardImage {
     width: 300px;
     height: 300px;
-    margin: 0;
 }
 
 footer {
