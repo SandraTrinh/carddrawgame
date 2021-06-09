@@ -24,7 +24,7 @@ function shuffButtonHandler(event) {
 function drawButtonHandler(event) {
     let card = Model.drawCard();
     if (card) {
-        View.cardView("target",card);
+        View.cardView("target",card[0]);
     } else {
         View.emptyView();
     }
