@@ -3,6 +3,8 @@ import * as View from '/views.js'
 
 window.addEventListener("modelUpdated",function(e){
     binding();
+    let countNum = Model.getCountDeck();
+    View.countDeckView("deckCount",countNum);
 });
 
 function binding() {

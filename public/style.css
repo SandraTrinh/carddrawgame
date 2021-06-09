@@ -56,6 +56,17 @@ button {
     height: 300px;
 }
 
+#deckCount {
+    border: 1px solid black;
+    width: 300px;
+    display: flex;
+    text-align: center;
+}
+
+#deckCount h2 {
+   
+}
+
 footer {
     background-color: white;
     border: 3px solid black;
