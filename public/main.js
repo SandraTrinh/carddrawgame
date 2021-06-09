@@ -14,10 +14,18 @@ function binding() {
     //draw button
     let drawButton = document.getElementById("draw");
     drawButton.onclick = drawButtonHandler;
+
+    //refresh button
+    let refreshButton = document.getElementById("refresh");
+    refreshButton.onclick = refreshButtonHandler;
 };
 
 function shuffButtonHandler(event) {
     Model.shuff();
+};
+
+function refreshButtonHandler() {
+    Model.updateDeck();
 };
 
 function drawButtonHandler(event) {
