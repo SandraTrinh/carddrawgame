@@ -26,7 +26,6 @@ function emptyView() {
 
 function countDeckView(targetid, countDeck) {
     let target = document.getElementById(targetid);
-    target.innerHTML = "<p>Cards in DECK: </p><p>";
-    target.innerHTML += countDeck;
-    target.innerHTML += "/54 </p>";
+    target.innerHTML = "<p>Cards in DECK: </p>";
+    target.innerHTML += "<p>"+countDeck + "/54 </p>";
 }
