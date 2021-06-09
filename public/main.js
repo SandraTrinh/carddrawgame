@@ -28,6 +28,8 @@ function refreshButtonHandler() {
     Model.updateDeck();
     View.refreshView();
     console.log("refresh page! Updata local deck database.");
+    let countNum = Model.getCountDeck();
+    View.countDeckView("deckCount",countNum);
 };
 
 function drawButtonHandler(event) {
