@@ -3,8 +3,7 @@ import * as View from '/views.js'
 
 window.addEventListener("modelUpdated",function(e){
     binding();
-    let countNum = Model.getCountDeck();
-    View.countDeckView("deckCount",countNum);
+    
 });
 
 function binding() {
@@ -32,11 +31,16 @@ function drawButtonHandler(event) {
 };
 
 window.addEventListener("cardIsDrawn", function(e){
+ 
+});
+
+window.addEventListener("countUpdated", function(e){
     let countNum = Model.getCountDeck();
     View.countDeckView("deckCount",countNum);
 });
 
 window.onload = function() {
     Model.updateDeck();
-    
+    let countNum = Model.getCountDeck();
+    View.countDeckView("deckCount",countNum);
 };

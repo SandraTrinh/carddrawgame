@@ -21,11 +21,11 @@ const Model = {
         (data) => {
             //put updated post data from the database
             // into local post array
-            this.data.deck = data
+            this.data.deck = data;
             //create a model update event
-            console.log(data)
+            console.log(data);
             let event = new CustomEvent("modelUpdated");
-            window.dispatchEvent(event)
+            window.dispatchEvent(event);
         }
     )
 
@@ -73,11 +73,11 @@ const Model = {
 
   //get the current number of cards left in the deck
   getCountDeck: function() {
-    let count = 0;
+    let count1 = 0;
     for(let i=0; i<this.data.deck.length; i++){
-      count += this.data.deck[i].count;
+      count1 += this.data.deck[i].count;
     }
-    return count;
+    return count1;
   },
 
   // //this check if the deck have cards or not
