@@ -37,6 +37,10 @@ button {
     height: 560px;
 }
 
+#target div {
+    border: 0px;
+}
+
 .cardName, p {
     width: 500px;
     padding: 30px;
