@@ -39,6 +39,11 @@ button {
     margin: 10px auto 10px auto;
 }
 
+button:hover {
+    background-color: black;
+    color: white;
+}
+
 #target, #target div {
     border: 3px solid black;
     width: 305px;

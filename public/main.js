@@ -26,6 +26,8 @@ function shuffButtonHandler(event) {
 
 function refreshButtonHandler() {
     Model.updateDeck();
+    View.refreshView();
+    console.log("refresh page! Updata local deck database.");
 };
 
 function drawButtonHandler(event) {

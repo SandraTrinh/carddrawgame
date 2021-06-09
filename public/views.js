@@ -1,4 +1,4 @@
-export {cardView, shuffView, emptyView, countDeckView}
+export {cardView, shuffView, emptyView, countDeckView, refreshView}
 
 function applyTemplate (targetid, templateid, data){
     let target = document.getElementById(targetid);
@@ -28,4 +28,9 @@ function countDeckView(targetid, countDeck) {
     let target = document.getElementById(targetid);
     target.innerHTML = "<h2>Cards in DECK: </h2>";
     target.innerHTML += "<p>"+countDeck + "/54 </p>";
+}
+
+function refreshView() {
+    let target = document.getElementById("target");
+    target.innerHTML = "<p>Page is Refreshed!</p>"
 }
