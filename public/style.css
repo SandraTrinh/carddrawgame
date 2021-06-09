@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    width: 900px;
+    margin: auto;
+}
+
+body {
+    background-color:brown;
+}
+
+header {
+    border: 3px solid black;
+    padding: 30px;
+    background-color: white;
+}
+
+section {
+    background-color: white;
+    
+}
+
+#content {
+    background-color: white;
+    width: 800px;
+    text-align: center;
+}
+
+button {
+    width: 600px;
+    height: 50px;
+    margin: auto;
+}
+
+#target, #target div {
+    border: 3px solid black;
+    width: 500px;
+    height: 560px;
+}
+
+.cardName, p {
+    width: 500px;
+    padding: 30px;
+}
+
+.cardImage {
+    width: 500px;
+    height: 500px;
+    margin: 0;
+}
+
+footer {
+    background-color: white;
+    border: 3px solid black;
+    padding: 30px;
+}

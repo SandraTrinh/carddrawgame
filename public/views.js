@@ -16,10 +16,10 @@ function cardView (targetid, card) {
 
 function shuffView() {
     let target = document.getElementById("target");
-    target.innerHTML = "Deck is Shuffled and reset!"
+    target.innerHTML = "<p>Deck is Shuffled and reset!</p>"
 }
 
 function emptyView() {
     let target = document.getElementById("target");
-    target.innerHTML = "Deck is Empty"
+    target.innerHTML = "<p>Deck is Empty</p>"
 }
