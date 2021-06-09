@@ -61,10 +61,7 @@ button {
     width: 300px;
     display: flex;
     text-align: center;
-}
-
-#deckCount h2 {
-   
+    margin: auto auto 10px auto;
 }
 
 footer {
