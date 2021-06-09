@@ -45,7 +45,7 @@ const Model = {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
+      console.log("Count updated this Card: ",data);
       this.updateDeck();
       let event = new CustomEvent("countUpdated");
       window.dispatchEvent(event)
@@ -64,7 +64,7 @@ const Model = {
   //is the card still in the deck?
   haveCard: function(cardId) {
     let haveTheCard = true;
-    let card = this.data.deck[cardId-1];
+    let card = this.getCard(cardId);
     if(card.count === 0){
       haveTheCard = false;
     }
@@ -94,23 +94,28 @@ const Model = {
   //decriment card count
   removeCard: function(cardId) {
     if(this.haveCard(cardId)){
-      let countNum = this.data.deck[cardId-1].count;
-      console.log("before count --",countNum)
+      let card = this.getCard(cardId);
+      let countNum = card[0].count;
       countNum --;
-      console.log("after count --",countNum);
       this.updateCount(cardId,countNum);
     }
   },
 
   getCard: function(cardId) {
-    console.log("card is: ", this.data.deck[cardId-1]);
-    return this.data.deck[cardId-1];
+    let card = [];
+    for(let i=0; i<this.data.deck.length; i++){
+      if(this.data.deck[i].id === cardId){
+        card.push(this.data.deck[i]);
+      }
+    }
+    console.log("get card is: ", card);
+    return card;
   },
 
   //draw a card
   drawCard: function() {
     //pick a card 1 to 5
-    let card = Util.getRndInteger(1,6);
+    let cardid = Util.getRndInteger(1,6);
     
     //check if card is still in deck
     let flag = true;
@@ -122,19 +127,19 @@ const Model = {
     }
     if(full){
       while (flag){
-        console.log("card id is: ", card);
-        if(!this.haveCard(card)){
-          card = Util.getRndInteger(1,6);
+        console.log("Random card id is: ", cardid);
+        if(!this.haveCard(cardid)){
+          cardid = Util.getRndInteger(1,6);
         } else {
           flag = false;
         }
       }
 
-      this.removeCard(card);
+      this.removeCard(cardid);
 
       let event = new CustomEvent("cardIsDrawn");
       window.dispatchEvent(event)
-      return this.getCard(card);
+      return this.getCard(cardid);
     } else {
       return null;
     } 
